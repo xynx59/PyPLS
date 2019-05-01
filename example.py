@@ -8,8 +8,8 @@ Created on Tue Apr 30 20:51:57 2019
 import os
 import numpy as np
 import pandas as pd
-import PLSR
-import PLSR_numba
+from PyPLS import PLSR, PLSR_numba
+
 import CV
 import time
 from sklearn.cross_decomposition import PLSRegression
@@ -47,7 +47,7 @@ def main():
     cwd =  os.getcwd()
     model_list = [PLSRegression, PLSR.PLSR, LinearRegression, 'PLSR_fix']
     N_model = len(model_list)
-    dataset = 'gasoline'
+    dataset = 'sim'
     datatype = 'csv'
     N_dataset = 5
     K = 5
